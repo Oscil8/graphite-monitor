@@ -1,0 +1,33 @@
+# Graphite::Monitor
+
+Use Graphite APIs to read monitored values from a Graphite server
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'graphite-monitor'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install graphite-monitor
+
+## Usage
+
+    > Graphite::Monitor.base_uri 'my-graphite.foobar.com'
+    > m = Graphite::Monitor.new 'foo.bar.*'
+    > m.latest  # defaults to {:from => "-30min"}
+
+    [ ...  some data ... ]
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
